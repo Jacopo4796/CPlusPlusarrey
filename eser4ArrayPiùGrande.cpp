@@ -7,7 +7,7 @@ using namespace std;
 
 int arrayMax(int arrayNumbers[], int arrayLength)
 {
-    int risultato = arrayNumbers[0]; // Il risultato lo imposto come array[0]
+    int risultato = arrayNumbers[0]; // Il risultato lo imposto uguale array[0]
     for( int i = 0; i < arrayLength; i++) // Mi scorro la lunghezza dell'array
     {
         if(arrayNumbers[i] > risultato) // Se l'array è maggiore di risultato
