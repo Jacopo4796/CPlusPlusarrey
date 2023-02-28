@@ -9,7 +9,7 @@ using namespace std;
 int sumArray(int arrayNumbers[], int arrayLength) // Funzione ch mi calcola la somma degli elementi dell'array
 {
     int risultato = 0;
-    for( int i = 0; i < arrayLength; i++) // Mi scorro la lunghezza dell'array
+    for(int i = 0; i < arrayLength; i++) // Mi scorro la lunghezza dell'array
     {
         risultato += arrayNumbers[i];
     }
