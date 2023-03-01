@@ -7,23 +7,33 @@ output {1,2,3} {4,7}.*/
 #include <array>
 using namespace std;
 
-int arraySequenze(int arrayNum[], int lunghezza)
+int arraySequenze(int arrayNumbers[], int lunghezza)
 {
     int sequenze = 0;
     for (int i = 0; i < lunghezza; i++) // Mi scorro la lunghezza dell'array
     {
-        while(arrayNum[i] < arrayNum[i + 1]) // Incrementa i finchè [i] < [i +1]
+        if (arrayNumbers[i] < arrayNumbers[i + 1] && arrayNumbers[i] != true && arrayNumbers[i] != arrayNumbers[lunghezza -1])
         {
-            i++;
+            while (arrayNumbers[i] < arrayNumbers[i + 1])
+            {
+                i++; // Incrementa i finchè [i] < [i +1]
+            }
+            sequenze++; // Incrementa il contatore sequenze
         }
-        sequenze++; // Incrementa il contatore sequenze
     }
     return sequenze;
 }
 
 int main()
 {
-    int arrayNum[7] = {5, 2, 3, 5, 4, 7, 6};
-    int lunghezza = sizeof(arrayNum) / sizeof(arrayNum[0]);
-    cout << "Nell'array sono presenti " << arraySequenze(arrayNum, lunghezza) << " sequenze. \n";
+    int lunghezza;
+    cout << "Quanto deve essere lungo l'array? \n";
+    cin >> lunghezza;
+    int arrayNumbers[lunghezza];
+    cout << "Inserisci gli elementi dell'array: \n";
+    for (int i = 0; i < lunghezza; i++)
+    {
+        cin >> arrayNumbers[i];
+    }
+    cout << "Nell'array sono presenti " << arraySequenze(arrayNumbers, lunghezza) << " sequenze. \n";
 }
