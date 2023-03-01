@@ -12,7 +12,7 @@ int arraySequenze(int arrayNumbers[], int lunghezza)
     int sequenze = 0;
     for (int i = 0; i < lunghezza; i++) // Mi scorro la lunghezza dell'array
     {
-        if (arrayNumbers[i] < arrayNumbers[i + 1] && arrayNumbers[i] != true && arrayNumbers[i] != arrayNumbers[lunghezza -1])
+        if (arrayNumbers[i] < arrayNumbers[i + 1] && i < lunghezza -1)
         {
             while (arrayNumbers[i] < arrayNumbers[i + 1])
             {
