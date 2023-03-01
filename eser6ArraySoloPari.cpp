@@ -32,13 +32,13 @@ using namespace std;
     {
         if(arrayNumbers[i] % 2 == 0)
         {
-            pari[indice] = arrayNumbers[i]; // Qhando trovo il pari lo metto nel secondo array
+            pari[indice] = arrayNumbers[i]; // Quando trovo il pari lo metto nel secondo array
             indice++;
         }
     }
 
     for(int i = 0; i < contaPari; i++) // Mi scorro la lunghezza del NUOVO array
     {
-        cout << pari[i] << " - ";
+        cout << pari[i] << " - "; // Stampo i pari
     }
  }
