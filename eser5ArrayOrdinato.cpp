@@ -22,7 +22,7 @@ bool arrayOrdine(int arrayNumbers[], int arrayLength)
 
 int main ()
 {
-    int arrayNumbers[5] = {1, 2, 3, 4, 5};
+    int arrayNumbers[5] = {1, 2, 3, 5, 7};
     int arrayLength = sizeof(arrayNumbers) / sizeof(arrayNumbers[0]);
     if(arrayOrdine(arrayNumbers, arrayLength) == true)
     {
