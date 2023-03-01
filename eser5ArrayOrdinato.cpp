@@ -13,11 +13,7 @@ bool arrayOrdine(int arrayNumbers[], int arrayLength)
     {
         if(arrayNumbers[i] > arrayNumbers[i +1]) // Comparo l'array[i] con il successivo(array[i +1])
         {
-            return true; 
-        }
-        else
-        {
-            return false;
+            ordine = false; 
             break;
         }
     }
@@ -28,12 +24,12 @@ int main ()
 {
     int arrayNumbers[5] = {1, 2, 3, 4, 5};
     int arrayLength = sizeof(arrayNumbers) / sizeof(arrayNumbers[0]);
-    if(arrayOrdine(arrayNumbers, arrayLength) == false)
+    if(arrayOrdine(arrayNumbers, arrayLength) == true)
     {
         cout << "L'array è in ordine crescente. \n";
     }
     else
     {
-        cout << "L'array è in ordine decrescente. \n";
+        cout << "L'array non è in ordine. \n";
     }
 }
