@@ -17,7 +17,7 @@ int indiceArrayMax(int arrayNumbers[], int arrayLength)
         if (arrayNumbers[i] > risultato) // Se l'array è maggiore di risultato
         {
             risultato = arrayNumbers[i]; // Imposto come risultato l'array[i]
-            indice = i;
+            indice = i; // Imposto l'indice a i
         }
     }
     return indice;

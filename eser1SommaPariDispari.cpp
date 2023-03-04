@@ -8,27 +8,31 @@ es. input [3, 5, 2, 8, 9, 4]
 
 #include <iostream>
 #include <array>
-#include <string>
 using namespace std;
 
 int main()
 {
+    int lunghezza;
+    cout << "Quanto deve essere lungo l'array? \n";
+    cin >> lunghezza;
+    int array[lunghezza];
+    cout << "Inserisci gli elementi dell'array: \n";
+
     int somPari = 0;
     int somDispari = 0;
-    int arrayNumeri[6] = {3, 5, 2, 8, 9, 4};
-
-    for(int i = 0; i < 6; i++) 
+    
+    for(int i = 0; i < lunghezza; i++) 
     {
-        if(arrayNumeri[i] % 2 == 0)
+        if(array[i] % 2 == 0)
         {
-            somPari += arrayNumeri[i]; // Mi somma i numeri pari
+            somPari += array[i]; // Mi somma i numeri pari
         }
     }
-    for(int i = 0; i < 6; i++) 
+    for(int i = 0; i < lunghezza; i++) 
     {
-        if(arrayNumeri[i] % 2 != 0)
+        if(array[i] % 2 != 0)
         {
-            somDispari += arrayNumeri[i]; // Mi somma i numeri dispari   
+            somDispari += array[i]; // Mi somma i numeri dispari   
         }
     }
     cout << "La somma dei numeri pari è: " << somPari << ". \n";

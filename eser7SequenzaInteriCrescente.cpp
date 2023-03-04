@@ -2,7 +2,7 @@
 di interi e la sua lunghezza e restituisca il numero
 di sequenza di interi crescenti all'interno dell'array.
 input {1,2,3,5,4,7}
-output {1,2,3} {4,7}.*/
+output {1,2,3,5} {4,7}.*/
 #include <iostream>
 #include <array>
 using namespace std;
@@ -12,9 +12,9 @@ int arraySequenze(int arrayNumbers[], int lunghezza)
     int sequenze = 0;
     for (int i = 0; i < lunghezza; i++) // Mi scorro la lunghezza dell'array
     {
-        if (arrayNumbers[i] < arrayNumbers[i + 1] && i < lunghezza -1)
+        if (arrayNumbers[i] < arrayNumbers[i + 1] && i < lunghezza - 1) // Se il primo valore è minore del secondo e i è minore della lunghezza dell'array
         {
-            while (arrayNumbers[i] < arrayNumbers[i + 1])
+            while (arrayNumbers[i] < arrayNumbers[i + 1]) // Se il primo valore è minore del secondo
             {
                 i++; // Incrementa i finchè [i] < [i +1]
             }

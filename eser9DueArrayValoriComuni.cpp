@@ -10,13 +10,13 @@ using namespace std;
 int datiArrayUguali(int arrayNumbers[], int arrayNumbers2[], int lunghezza, int lunghezza2)
 {
     int valoriUguali = 0;
-    for (int i = 0; i < lunghezza; i++)
+    for (int i = 0; i < lunghezza; i++) // Scorro il primo array
     {
-        for(int j = 0; j < lunghezza2; j++)
+        for(int j = 0; j < lunghezza2; j++) // Scorro il secondo array
         {
-            if(arrayNumbers[i] == arrayNumbers2[j])
+            if(arrayNumbers[i] == arrayNumbers2[j]) // Se la i è uguale alla j
             {
-                valoriUguali++;
+                valoriUguali++; // Incrementa valoriUguali
             }
         }
     } 
