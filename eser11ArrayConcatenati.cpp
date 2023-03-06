@@ -30,16 +30,18 @@ int main()
         cin >> arrayNumbers2[i];
     }
 
-    int lung = lunghezza1 + lunghezza2; // Creo la variabile lung 
-    int arrayRisultato[lung]; // Mi creo un nuovo array lungo lunghezza1 e lunghezza2
-
+    int lung = lunghezza1 + lunghezza2;  // Creo la variabile lung
+    int arrayRisultato[lung];            // Mi creo un nuovo array lungo lunghezza1 e lunghezza2
+    int index = 0;                       // Creo un indice che mi memorizza l'indice di arrayRisultato
     for (int i = 0; i < lunghezza1; i++) // Scorro il primo array
     {
-        arrayRisultato[i] = arrayNumbers[i]; // Dentro arrayRisultato metto cosa c'è dentro arrayNumbers
+        arrayRisultato[index] = arrayNumbers[i]; // Dentro arrayRisultato metto cosa c'è dentro arrayNumbers
+        index++;                                 // Incremento l'indice
     }
     for (int i = 0; i < lunghezza2; i++) // Scorro il secondo array
     {
-        arrayRisultato[lunghezza1] = arrayNumbers2[i]; // Dentro arrayRisultato metto cosa c'è dentro arrayNumbers2
+        arrayRisultato[index] = arrayNumbers2[i]; // Dentro arrayRisultato metto cosa c'è dentro arrayNumbers2
+        index++;                                  // Incremento l'indice
     }
     cout << "La concarenazione dei due array è: \n";
     for (int i = 0; i < lung; i++) // Scorro la lunghezza di arrayRisultato
